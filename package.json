@@ -1,0 +1,30 @@
+{
+  "name": "ndut-socket-io",
+  "version": "0.4.0",
+  "description": "Socket IO for Ndut Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardhi/ndut-socket-io.git"
+  },
+  "keywords": [
+    "ndut",
+    "socket",
+    "io",
+    "socket-io",
+    "fastify",
+    "realtime"
+  ],
+  "author": "Ardhi Lukianto <ardhi@lukianto.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ardhi/ndut-socket-io/issues"
+  },
+  "homepage": "https://github.com/ardhi/ndut-socket-io#readme",
+  "dependencies": {
+    "socket.io": "^4.4.1"
+  }
+}
