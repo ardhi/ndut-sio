@@ -4,7 +4,8 @@ const handleSysEvent = require('../lib/handle-sys-event')
 const handleMiddleware = require('../lib/handle-middleware')
 
 const plugin = async function (scope, options) {
-  const io = new Server(scope.server, options)
+  const { _, defNdutKeys } = scope.ndut.helper
+  const io = new Server(scope.server, _.omit(options, defNdutKeys))
   scope.ndutSocketIo.io = io
   scope.addHook('onClose', async (instance, done) => {
     scope.log.debug('Closing socket.io server')
@@ -12,9 +13,9 @@ const plugin = async function (scope, options) {
     done()
   })
   io.on('connection', async socket => {
-    await handleSysEvent.call(this, socket)
-    await handleEvent.call(this, socket)
-    await handleMiddleware.call(this, socket)
+    await handleSysEvent.call(scope, socket)
+    await handleEvent.call(scope, socket)
+    await handleMiddleware.call(scope, socket)
   })
 }
 
