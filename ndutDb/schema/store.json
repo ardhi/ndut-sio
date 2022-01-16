@@ -1,0 +1,32 @@
+{
+  "properties": {
+    "id": {
+      "type": "String",
+      "required": true,
+      "id": true
+    },
+    "userId": {
+      "type": "Number",
+      "index": true
+    },
+    "roleId": {
+      "type": "Number",
+      "index": true
+    },
+    "siteId": {
+      "type": "Number",
+      "index": true
+    },
+    "token": {
+      "type": "String"
+    },
+    "status": {
+      "type": "String"
+    }
+  },
+  "feature": {
+    "createdAt": true,
+    "updatedAt": true,
+    "siteId": true
+  }
+}
