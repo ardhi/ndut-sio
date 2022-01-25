@@ -27,6 +27,6 @@
   "feature": {
     "createdAt": true,
     "updatedAt": true,
-    "siteId": true
+    "ndutSiteSiteId": true
   }
 }
