@@ -10,7 +10,7 @@ module.exports = async function () {
   const name = 'ndut-socket-io'
   const alias = 'sio'
   const plugin = fp(require('./lib/plugin'))
-  const options = await getNdutConfig('ndut-socket-io')
+  const options = getNdutConfig('ndut-socket-io')
   options.cors = options.cors || defCors
   const dependency = ['ndut-db']
   return { name, plugin, alias, dependency, options }
