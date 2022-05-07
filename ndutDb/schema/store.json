@@ -1,20 +1,8 @@
 {
   "properties": {
-    "id": {
-      "type": "String",
-      "required": true,
-      "id": true
-    },
-    "userId": {
-      "type": "Number",
-      "index": true
-    },
     "roleId": {
-      "type": "Number",
-      "index": true
-    },
-    "siteId": {
-      "type": "Number",
+      "type": "String",
+      "length": 20,
       "index": true
     },
     "token": {
@@ -24,9 +12,5 @@
       "type": "String"
     }
   },
-  "feature": {
-    "createdAt": true,
-    "updatedAt": true,
-    "ndutSiteSiteId": true
-  }
+  "feature": ["createdAt", "updatedAt", "ndutSiteSiteId", "ndutAuthUserId"]
 }
