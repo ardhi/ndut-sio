@@ -1,12 +1,15 @@
 {
+  "dataSource": "memory",
   "properties": {
-    "roleId": {
+    "id": {
+      "type": "String",
+      "length": 50,
+      "id": true
+    },
+    "teamId": {
       "type": "String",
       "length": 20,
       "index": true
-    },
-    "token": {
-      "type": "String"
     },
     "status": {
       "type": "String"

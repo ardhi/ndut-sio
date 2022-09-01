@@ -1,6 +1,6 @@
 const { Server } = require('socket.io')
 const handleEvent = require('../lib/handle-event')
-const handleSysEvent = require('../lib/handle-sys-event')
+const handleConnect = require('../lib/handle-connect')
 const handleMiddleware = require('../lib/handle-middleware')
 
 const plugin = async function (scope, options) {
@@ -13,7 +13,8 @@ const plugin = async function (scope, options) {
     done()
   })
   io.on('connection', async socket => {
-    await handleSysEvent.call(scope, socket)
+    socket.join('lobby')
+    await handleConnect.call(scope, socket)
     await handleEvent.call(scope, socket)
     await handleMiddleware.call(scope, socket)
   })
